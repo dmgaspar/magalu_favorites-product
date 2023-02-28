@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abccf13a-7912-4b3f-b1eb-83d13374f329" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/ClientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/exception/ControllerExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/exception/ErrorMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/repository/ClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="abccf13a-7912-4b3f-b1eb-83d13374f329" name="Changes" comment="First basic version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/dao/ClientRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/dao/EmployeeRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/entity/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/FavoritesProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/FavoritesProductApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/exception/ControllerExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/exception/ControllerExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +60,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/DEV/magalu_favorietes-product",
+    "last_opened_file_path": "C:/DEV/Java/Course/spring-and-hibernate-for-beginners/03-hibernate-5/solution-code-hibernate-hb-04-one-to-many-uni",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
@@ -94,6 +86,14 @@
       <option name="presentableId" value="Default" />
       <updated>1677531672800</updated>
     </task>
+    <task id="LOCAL-00001" summary="First basic version">
+      <created>1677586859233</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677586859233</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -101,5 +101,18 @@
       <path value="$PROJECT_DIR$/../.." />
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+    <MESSAGE value="First basic version" />
+    <option name="LAST_COMMIT_MESSAGE" value="First basic version" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/ClientController.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -23,7 +23,7 @@ import com.magalu.favorites.product.exception.*;
 import com.magalu.favorites.product.model.Client;
 import com.magalu.favorites.product.repository.ClientRepository;
 
-@CrossOrigin(origins = "http://localhost:8081")
+//@CrossOrigin(origins = "http://localhost:8081")
 @RestController
 @RequestMapping("/api")
 public class ClientController {
@@ -35,7 +35,11 @@ public class ClientController {
 
     @PostMapping("/clients")
     public ResponseEntity<Client> createClient(@RequestBody Client client) {
-        client.setId(0);
+        List<Client> clients = clientRepository.findByEmail(client.getEmail());
+        if(!clients.isEmpty())
+        {
+            return new ResponseEntity<>(HttpStatus.CONFLICT);
+        }
         Client _client =  clientRepository.save(new Client(client.getName(), client.getEmail()));
         return new ResponseEntity<>(_client, HttpStatus.CREATED);
     }

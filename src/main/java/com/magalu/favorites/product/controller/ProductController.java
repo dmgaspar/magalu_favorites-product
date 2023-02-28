@@ -22,7 +22,7 @@ import com.magalu.favorites.product.model.Client;
 import com.magalu.favorites.product.repository.ClientRepository;
 
 
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api")
 
