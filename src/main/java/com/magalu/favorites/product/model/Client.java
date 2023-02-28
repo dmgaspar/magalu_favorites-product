@@ -1,4 +1,4 @@
-package com.magalu.favorites.product.entity;
+package com.magalu.favorites.product.model;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -7,8 +7,6 @@ import java.util.Set;
     @Entity
     @Table(name="client")
     public class Client {
-
-
         @Id
         @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "client_generator")
         private long id;

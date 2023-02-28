@@ -1,4 +1,4 @@
-package com.magalu.favorites.product.entity;
+package com.magalu.favorites.product.model;
 
 
 import javax.persistence.*;
