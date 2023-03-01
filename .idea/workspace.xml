@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abccf13a-7912-4b3f-b1eb-83d13374f329" name="Changes" comment="First basic version">
+    <list default="true" id="abccf13a-7912-4b3f-b1eb-83d13374f329" name="Changes" comment="Connection with database and controller requests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/FavoritesProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/FavoritesProductApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/exception/ControllerExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/exception/ControllerExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/repository/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/repository/ProductRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677586859233</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Connection with database and controller requests">
+      <created>1677610734640</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677610734640</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -102,17 +108,7 @@
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
     <MESSAGE value="First basic version" />
-    <option name="LAST_COMMIT_MESSAGE" value="First basic version" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/ClientController.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Connection with database and controller requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connection with database and controller requests" />
   </component>
 </project>

@@ -23,15 +23,11 @@ import com.magalu.favorites.product.exception.*;
 import com.magalu.favorites.product.model.Client;
 import com.magalu.favorites.product.repository.ClientRepository;
 
-//@CrossOrigin(origins = "http://localhost:8081")
 @RestController
 @RequestMapping("/api")
 public class ClientController {
     @Autowired
     private ClientRepository clientRepository;
-
-    @Autowired
-    private ProductRepository productRepository;
 
     @PostMapping("/clients")
     public ResponseEntity<Client> createClient(@RequestBody Client client) {
@@ -46,12 +42,11 @@ public class ClientController {
     @GetMapping("/clients")
     public ResponseEntity<List<Client>> getAllClients(@RequestParam(required = false) String email) {
         List<Client> clients = new ArrayList<Client>();
-
+        //todo: check email
         if (email == null)
             clientRepository.findAll().forEach(clients::add);
         else
             clientRepository.findByEmail(email).forEach(clients::add);
-
 
         if (clients.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -80,6 +75,9 @@ public class ClientController {
     }
     @DeleteMapping("/clients/{id}")
     public ResponseEntity<HttpStatus> deleteClient(@PathVariable("id") long id) {
+        Client client = clientRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Not found client with id = " + id));
+
         clientRepository.deleteById(id);
 
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

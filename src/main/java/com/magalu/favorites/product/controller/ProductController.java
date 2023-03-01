@@ -7,7 +7,6 @@ import com.magalu.favorites.product.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,11 +21,8 @@ import com.magalu.favorites.product.model.Client;
 import com.magalu.favorites.product.repository.ClientRepository;
 
 
-//@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api")
-
-
 public class ProductController {
     @Autowired
     private ClientRepository clientRepository;
@@ -37,10 +33,6 @@ public class ProductController {
     @PostMapping("/clients/{clientId}/products")
     public ResponseEntity<Product> createProduct(@PathVariable(value = "clientId") Long clientId,
                                                  @RequestBody Product productRequest) {
-        //Todo: fix this exception
-        if (productRepository.existsById(productRequest.getId())) {
-            throw new ResourceNotFoundException("The product with id = " + clientId + " already exist" );
-        }
 
         Product product = clientRepository.findById(clientId).map(client -> {
             client.getProducts().add(productRequest);
