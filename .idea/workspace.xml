@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abccf13a-7912-4b3f-b1eb-83d13374f329" name="Changes" comment="Connection with database and controller requests">
+    <list default="true" id="abccf13a-7912-4b3f-b1eb-83d13374f329" name="Changes" comment="Client Controller finished">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/dto/ProductDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/exception/ResourceAlreadyExistException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/exception/ControllerExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/exception/ControllerExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/model/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/repository/ClientRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/repository/ProductRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,14 +58,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/DEV/Java/Course/spring-and-hibernate-for-beginners/03-hibernate-5/solution-code-hibernate-hb-04-one-to-many-uni",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/DEV/Java/Course/spring-and-hibernate-for-beginners/03-hibernate-5/solution-code-hibernate-hb-04-one-to-many-uni&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -99,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677610734640</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Client Controller finished">
+      <created>1677634034742</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677634034742</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -109,6 +119,7 @@
     </ignored-roots>
     <MESSAGE value="First basic version" />
     <MESSAGE value="Connection with database and controller requests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connection with database and controller requests" />
+    <MESSAGE value="Client Controller finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Client Controller finished" />
   </component>
 </project>

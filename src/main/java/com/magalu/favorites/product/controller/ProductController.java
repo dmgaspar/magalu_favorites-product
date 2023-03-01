@@ -2,6 +2,7 @@ package com.magalu.favorites.product.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.magalu.favorites.product.dto.ProductDTO;
 import com.magalu.favorites.product.model.Product;
 import com.magalu.favorites.product.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.magalu.favorites.product.exception.*;
 import com.magalu.favorites.product.model.Client;
 import com.magalu.favorites.product.repository.ClientRepository;
+import org.springframework.web.client.HttpStatusCodeException;
+import org.springframework.web.client.RestClientException;
+import org.springframework.web.client.RestTemplate;
 
 
 @RestController
@@ -30,14 +34,41 @@ public class ProductController {
     @Autowired
     private ProductRepository productRepository;
 
+    public static final String MAGUALU_PRODUCT_URI = "http://challenge-api.luizalabs.com/api/product/";
+
     @PostMapping("/clients/{clientId}/products")
     public ResponseEntity<Product> createProduct(@PathVariable(value = "clientId") Long clientId,
                                                  @RequestBody Product productRequest) {
 
+         Client clients = clientRepository.findById(clientId)
+                .orElseThrow(() -> new ResourceNotFoundException("Not found Client with id = " + clientId));
+
+        if(clients.contain(productRequest.getProductid())) {
+            throw new ResourceAlreadyExistException
+                    ("The product id " + productRequest.getProductid() + " alread exist for this client " + clientId);
+        }
+
+        ProductDTO productDTO;
+        try{
+            RestTemplate restTemplate = new RestTemplate();
+            String uri = MAGUALU_PRODUCT_URI + productRequest.getProductid() + "/";
+            productDTO = restTemplate.getForObject(uri, ProductDTO.class);
+        } catch(HttpStatusCodeException e){
+              throw new ResourceNotFoundException("Not found this product id = " + productRequest.getProductid() +
+                    " at http://challenge-api.luizalabs.com");
+        }
+        Product productResult =
+                new Product(productDTO.getPrice(),
+                        productDTO.getImage(),
+                        productDTO.getBrand(),
+                        productDTO.getId(),
+                        productDTO.getTitle()
+                        );
+
         Product product = clientRepository.findById(clientId).map(client -> {
-            client.getProducts().add(productRequest);
-            return productRepository.save(productRequest);
-        }).orElseThrow(() -> new ResourceNotFoundException("Not found Client with id = " + clientId));
+            client.getProducts().add(productResult);
+            return productRepository.save(productResult);
+        }).orElseThrow(() -> new ResourceNotFoundException("Not found this product id = " + clientId));
 
         return new ResponseEntity<>(product, HttpStatus.CREATED);
     }
@@ -76,6 +107,7 @@ public class ProductController {
         product.setBrand(productRequest.getBrand());
         product.setTitle(productRequest.getTitle());
         product.setPrice(productRequest.getPrice());
+        product.setProductid(productRequest.getProductid());
 
         return new ResponseEntity<>(productRepository.save(product), HttpStatus.OK);
     }

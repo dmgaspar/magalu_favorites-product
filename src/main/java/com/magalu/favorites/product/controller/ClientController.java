@@ -31,6 +31,12 @@ public class ClientController {
 
     @PostMapping("/clients")
     public ResponseEntity<Client> createClient(@RequestBody Client client) {
+
+        if(clientRepository.existsById(client.getId()))
+        {
+            return new ResponseEntity<>(HttpStatus.CONFLICT);
+        }
+
         List<Client> clients = clientRepository.findByEmail(client.getEmail());
         if(!clients.isEmpty())
         {
