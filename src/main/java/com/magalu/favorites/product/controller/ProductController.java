@@ -21,9 +21,7 @@ import com.magalu.favorites.product.exception.*;
 import com.magalu.favorites.product.model.Client;
 import com.magalu.favorites.product.repository.ClientRepository;
 import org.springframework.web.client.HttpStatusCodeException;
-import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
-
 
 @RestController
 @RequestMapping("/api")
@@ -57,6 +55,7 @@ public class ProductController {
               throw new ResourceNotFoundException("Not found this product id = " + productRequest.getProductid() +
                     " at http://challenge-api.luizalabs.com");
         }
+
         Product productResult =
                 new Product(productDTO.getPrice(),
                         productDTO.getImage(),
@@ -114,8 +113,7 @@ public class ProductController {
 
     @DeleteMapping("/clients/{clientId}/products/{productId}")
     public ResponseEntity<HttpStatus> deleteClient(@PathVariable("clientId") long clientId,
-                                                   @PathVariable("productId") long productId)
-     {
+                                                   @PathVariable("productId") long productId){
         if (!clientRepository.existsById(clientId)) {
             throw new ResourceNotFoundException("Not found Client with id = " + clientId);
         }

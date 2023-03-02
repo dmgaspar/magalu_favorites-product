@@ -7,20 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abccf13a-7912-4b3f-b1eb-83d13374f329" name="Changes" comment="Product Controller finished">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/data/UserDataDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/security/JWTAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/security/JWTConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/security/JWTValidateFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/services/UserDetailServiceImpl.java" afterDir="false" />
+    <list default="true" id="abccf13a-7912-4b3f-b1eb-83d13374f329" name="Changes" comment="JWT authentication code">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/magalu/favorites/product/model/ClientTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/FavoritesProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/FavoritesProductApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677708098122</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="JWT authentication code">
+      <created>1677786950079</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1677786950079</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -142,17 +139,7 @@
     <MESSAGE value="Connection with database and controller requests" />
     <MESSAGE value="Client Controller finished" />
     <MESSAGE value="Product Controller finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="Product Controller finished" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/magalu/favorites/product/controller/UserController.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="JWT authentication code" />
+    <option name="LAST_COMMIT_MESSAGE" value="JWT authentication code" />
   </component>
 </project>
