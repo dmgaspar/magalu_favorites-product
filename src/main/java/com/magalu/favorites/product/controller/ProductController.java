@@ -114,8 +114,8 @@ public class ProductController {
 
     @DeleteMapping("/clients/{clientId}/products/{productId}")
     public ResponseEntity<HttpStatus> deleteClient(@PathVariable("clientId") long clientId,
-                                                   @PathVariable("productId") long productId,
-                                                   @RequestBody Product productRequest) {
+                                                   @PathVariable("productId") long productId)
+     {
         if (!clientRepository.existsById(clientId)) {
             throw new ResourceNotFoundException("Not found Client with id = " + clientId);
         }
